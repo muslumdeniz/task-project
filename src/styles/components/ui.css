@@ -1,0 +1,35 @@
+@utility head-1 {
+  @apply font-semibold text-[32px];
+}
+
+@utility head-2 {
+  @apply font-semibold text-2xl;
+}
+
+@utility body-1 {
+  @apply font-normal text-lg;
+}
+
+@utility body-2 {
+  @apply font-normal text-base;
+}
+
+@utility body-2-semibold {
+  @apply font-semibold text-base;
+}
+
+@utility body-sm {
+  @apply font-normal text-sm;
+}
+
+@utility body-sm-medium {
+  @apply font-medium text-sm;
+}
+
+@utility body-sm-semibold {
+  @apply font-semibold text-sm;
+}
+
+@utility body-xs {
+  @apply font-normal text-xs;
+}

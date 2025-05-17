@@ -7,11 +7,15 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "svgr": "svgr ./public/icons -d ./src/components/ui/icons/all --typescript --no-dimensions --replace-attr-values  \"#000={props.color}=\"",
+    "generate-icons-index": "node ./scripts/generate-icons-index.cjs",
+    "build-icons": "npm run svgr && npm run generate-icons-index"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.7",
+    "classnames": "^2.5.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
@@ -20,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
+    "@svgr/cli": "^8.1.0",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.4",
     "@vitejs/plugin-react": "^4.4.1",

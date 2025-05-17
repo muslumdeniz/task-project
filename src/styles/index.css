@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@import "./variables/colors.css";
+@import "./components/ui.css";
+/* @import "./components/container.css";
+@import "./components/grid-system.css";
+
+@import "./utilies/index.css"; */
