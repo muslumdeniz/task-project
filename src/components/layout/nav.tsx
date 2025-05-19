@@ -6,7 +6,7 @@ type Props = {};
 
 const Nav = ({}: Props) => {
   return (
-    <nav className="pl-5">
+    <nav className="pl-6">
       <div className="flex items-center h-16 border-b  border-gray-200 gap-5">
         <div className="flex items-center  gap-2 ">
           <Icons

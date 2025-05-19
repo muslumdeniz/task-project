@@ -34,7 +34,7 @@ const Button = ({
 
   const buttonVariant = {
     variant: {
-      primary: "text-gray",
+      primary: "text-white",
       outline: "bg-transparent border",
       bare: "", // ✅ tamamen çerçevesiz / arka plansız stil
     },
@@ -45,7 +45,7 @@ const Button = ({
         lg: "p-3 body-sm-semibold",
       },
       label: {
-        sm: "py-2.5 px-4",
+        sm: "py-1.5 px-4",
         base: "py-4 px-8",
         lg: "py-4 px-8 body-sm-semibold",
       },

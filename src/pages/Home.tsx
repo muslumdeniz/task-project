@@ -1,10 +1,13 @@
 import { Layout } from "../components/layout";
+import { FilterBar } from "../components/module/filter-bar";
+import { Hero } from "../components/module/hero";
 
 function Home() {
   return (
     <Layout>
-      <div className="flex flex-col h-screen items-center justify-center">
-        <h1 className="text-3xl font-bold underline">main page!</h1>
+      <div className="">
+        <Hero />
+        <FilterBar />
       </div>
     </Layout>
   );
