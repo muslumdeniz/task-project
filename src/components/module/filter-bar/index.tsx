@@ -6,7 +6,7 @@ type Props = {};
 
 const FilterBar = ({}: Props) => {
   return (
-    <section className="flex h-72 gap-1 pl-8 pt-8 pr-8 relative">
+    <section className="flex  gap-1  relative">
       <div className="flex items-center h-20 border-y border-gray-200  relative w-full">
         {/* Sol div */}
         <div>
