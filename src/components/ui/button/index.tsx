@@ -6,7 +6,7 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   label?: string;
   prefixIcon?: IconTypes;
   suffixIcon?: IconTypes;
-  variant?: "primary" | "outline";
+  variant?: "primary" | "outline" | "bare"; // ✅ bare eklendi
   size?: "sm" | "base" | "lg";
   color?: "primary" | "gray";
   isRounded?: boolean;
@@ -36,6 +36,7 @@ const Button = ({
     variant: {
       primary: "text-gray",
       outline: "bg-transparent border",
+      bare: "", // ✅ tamamen çerçevesiz / arka plansız stil
     },
     size: {
       icon: {
@@ -44,7 +45,7 @@ const Button = ({
         lg: "p-3 body-sm-semibold",
       },
       label: {
-        sm: "py-2.5 px-4 ",
+        sm: "py-2.5 px-4",
         base: "py-4 px-8",
         lg: "py-4 px-8 body-sm-semibold",
       },
@@ -53,10 +54,12 @@ const Button = ({
       primary: {
         primary: "bg-primary",
         outline: "text-primary border-primary",
+        bare: "", // ✅ bare için boş bırakıldı
       },
       gray: {
         primary: "bg-gray",
         outline: "text-gray-50 border-gray-200",
+        bare: "", // ✅ bare için boş bırakıldı
       },
     },
   };
@@ -64,7 +67,7 @@ const Button = ({
   return (
     <button
       className={classNames(
-        "flex items-center cursor-pointer transition-all h-fit border-solid border-spacing-px",
+        "flex items-center cursor-pointer transition-all h-fit",
         buttonVariant.variant[variant],
         buttonVariant.size[!isIconButton && label ? "label" : "icon"][size],
         buttonVariant.color[color][variant],
