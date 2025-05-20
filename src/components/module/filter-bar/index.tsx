@@ -32,19 +32,20 @@ const FilterBar = ({}: Props) => {
         </div>
 
         <div className="ml-auto flex items-center gap-2 pr-2 ">
-          <Button variant="outline" prefixIcon="TextalignCenter" />
-          <Button variant="outline" prefixIcon="TextalignCenter" />
+          <Button variant="outline" color="gray" prefixIcon="TextalignCenter" />
+          <Button variant="outline" color="gray" prefixIcon="TextalignCenter" />
         </div>
         <div className="flex items-center">
           <Button
             variant="outline"
             prefixIcon="Category"
-            className=" rounded-r-none"
+            className=" rounded-r-none text-primary"
           />
           <Button
             variant="outline"
             prefixIcon="Abstract14"
             className=" rounded-l-none"
+            color="gray"
           />
         </div>
       </div>

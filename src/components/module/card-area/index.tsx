@@ -6,8 +6,6 @@ const CardArea = ({}: Props) => {
   return (
     <div className="flex gap-4">
       <Backlog />
-      <Backlog />
-      <Backlog />
     </div>
   );
 };

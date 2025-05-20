@@ -6,8 +6,8 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   label?: string;
   prefixIcon?: IconTypes;
   suffixIcon?: IconTypes;
-  variant?: "primary" | "outline" | "bare"; // ✅ bare eklendi
-  size?: "sm" | "base" | "lg";
+  variant?: "primary" | "outline" | "bare";
+  size?: "xs" | "sm" | "base" | "lg";
   color?: "primary" | "gray";
   isRounded?: boolean;
   isIconButton?: boolean;
@@ -30,21 +30,24 @@ const Button = ({
   ...props
 }: Props) => {
   const calculatedIconSize =
-    iconSize ?? (size === "lg" ? 18 : size === "base" ? 16 : 12);
+    iconSize ??
+    (size === "lg" ? 18 : size === "base" ? 16 : size === "sm" ? 14 : 12);
 
   const buttonVariant = {
     variant: {
       primary: "text-white",
       outline: "bg-transparent border",
-      bare: "", // ✅ tamamen çerçevesiz / arka plansız stil
+      bare: "", // tamamen çerçevesiz / arka plansız
     },
     size: {
       icon: {
+        xs: "p-1",
         sm: "p-1",
         base: "p-2",
         lg: "p-3 body-sm-semibold",
       },
       label: {
+        xs: "text-xs py-0.5 px-2",
         sm: "py-1.5 px-4",
         base: "py-4 px-8",
         lg: "py-4 px-8 body-sm-semibold",
@@ -53,13 +56,13 @@ const Button = ({
     color: {
       primary: {
         primary: "bg-primary",
-        outline: "text-primary border-primary",
-        bare: "", // ✅ bare için boş bırakıldı
+        outline: "text-primary border-primary hover:bg-primary/5",
+        bare: "",
       },
       gray: {
         primary: "bg-gray",
-        outline: "text-gray-50 border-gray-200",
-        bare: "", // ✅ bare için boş bırakıldı
+        outline: "text-gray-700 border border-gray-300 hover:bg-gray-50",
+        bare: "",
       },
     },
   };

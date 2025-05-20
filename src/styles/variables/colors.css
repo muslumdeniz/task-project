@@ -7,4 +7,11 @@
   --color-gray-150: #989b9e;
   --color-gray-200: #dde2e4;
   --color-bg-gray: #f5f7f9;
+
+  --color-tag-green: #ebfae2;
+  --color-tag-red: #fdf2f2;
+  --color-tag-blue: #eef3ff;
+  --color-tag-tx-green: #4f9c20;
+  --color-tag-tx-red: #ec5962;
+  --color-tag-tx-blue: #3069fe;
 }

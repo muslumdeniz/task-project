@@ -6,7 +6,7 @@ type Props = {};
 
 const Hero = ({}: Props) => {
   return (
-    <section className="flex h-72   relative">
+    <section className="flex h-48  relative">
       <div>
         <div className="flex items-center gap-1">
           <p className=" body-xs text-gray-100">Project</p>
@@ -20,8 +20,8 @@ const Hero = ({}: Props) => {
         </div>
       </div>
       <div className="flex items-center gap-2  ml-auto mb-auto">
-        <Button variant="outline" prefixIcon="Setting2" />
-        <Button variant="outline" prefixIcon="DotsHorizontal" />
+        <Button variant="outline" prefixIcon="Setting2" color="gray" />
+        <Button variant="outline" prefixIcon="DotsHorizontal" color="gray" />
         <Button
           prefixIcon="Plus"
           label="New Task"
